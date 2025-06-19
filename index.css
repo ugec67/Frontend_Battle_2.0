@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for aesthetic appeal */
+body {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #F06292 #fbcfe8; /* thumb color track color */
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #fbcfe8; /* color of the tracking area - light pink */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #F06292; /* color of the scroll thumb - strong pink */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 2px solid #fbcfe8; /* creates padding around scroll thumb */
+}
+
+/* Ensure Inter font is applied globally */
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Styling for the flower pattern to be subtle on dark mode */
+.dark svg pattern rect {
+  fill: url(#flower-pattern);
+  opacity: 0.05; /* Less opaque in dark mode */
+}
